@@ -12,6 +12,13 @@
 <meta property="og:url" content="https://www.termsfeed.com/live/87a820c2-ba62-4c86-b2f5-a6428ba17c30">
 <meta property="og:site_name" content="TermsFeed">
 <link rel="canonical" href="https://www.termsfeed.com/live/87a820c2-ba62-4c86-b2f5-a6428ba17c30">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SG3Z1F2PNY"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SG3Z1F2PNY');
+    </script>
 </head>
 <body>
 <div class="page">
@@ -180,12 +187,64 @@
 </div>
 </div>
 </div>
+</div>
+<script type="text/javascript">
+    const tabLinks = Array.from(document.querySelectorAll(".tab-link"));
+    const tabContents = document.querySelectorAll(".tab-content");
+    
+    tabLinks.forEach(function(tabLink) {
+        tabLink.addEventListener("click", toggleTab);
+    });
+    
+    let priorActiveTab = null;
+    
+    function toggleTab(event) {
+        tabLinks.forEach(function(tabLink, index){
+            tabLink.classList.remove("active");
+            tabLink.classList.add("inactive");
+        
+            tabContents[index].classList.remove("visible");
+            tabContents[index].classList.add("hidden");
+        });
 
-<div class="footer">
-<div class="container">
-<p>Generated using <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">TermsFeed Privacy Policy Generator</a></p>
-</div>
-</div>
-</div>
+        if(priorActiveTab === this) {
+            this.classList.remove("active");
+            this.classList.add("inactive");
+
+            tabContents[tabLinks.indexOf(this)].classList.remove("visible");
+            tabContents[tabLinks.indexOf(this)].classList.add("hidden");
+
+            priorActiveTab = null;
+        } else {
+            this.classList.remove("inactive");
+            this.classList.add("active");
+        
+            tabContents[tabLinks.indexOf(this)].classList.remove("hidden");
+            tabContents[tabLinks.indexOf(this)].classList.add("visible");
+        
+            priorActiveTab = this;
+        }
+        
+        if (priorActiveTab === null) {
+            this.classList.remove("inactive");
+            this.classList.add("active");
+        
+            tabContents[tabLinks.indexOf(this)].classList.remove("hidden");
+            tabContents[tabLinks.indexOf(this)].classList.add("visible");
+        }
+      
+        event.preventDefault();
+    }
+</script>
+<script type="text/javascript">
+    "use strict";
+    window.LCG_TRACKING_APPLICATION = "termsfeed-livelink";
+    window.LCG_TRACKING_ENVIRONMENT = "production";
+    window.LCG_TRACKING_EPOCH = "2020-e01";
+</script>
+<script src="/track/v1/r/js-code" type="text/javascript" async="true"></script>
+<script src="/track/v1/r/js-data" type="text/javascript" async="true"></script>
 <img src="/track/v1/px" style="position:fixed;right:0px;bottom:0px;display:none;">
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon="{&quot;rayId&quot;:&quot;76b8f2265ea09097&quot;,&quot;token&quot;:&quot;24d38a5cb57a4c87ad9f5238132ec4c3&quot;,&quot;version&quot;:&quot;2022.11.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
 </body></html>
